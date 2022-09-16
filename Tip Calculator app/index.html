@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./css(tailwind).css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tip Calculator</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Deca&family=Red+Hat+Display:wght@500;700;900&family=Rubik:ital,wght@0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="leading-normal tracking-normal">
+    <div class=" container mx-auto font1 mt-20">
+        <div class="flex justify-center">
+            <p class="font-semibold color5">SPLI<br>TTER</p>
+        </div>
+        <div class="my-6 containerSize justify-center mx-auto">
+            <div class=" bg-white rounded-lg ">
+                <div class=" flex flex-row  p-6   ">
+                    <div class="w-1/2 ">
+                        <form onsubmit="return calculateTip()">
+                            <label class="color5 font-semibold" for="">Bill</label><br>
+                            <div class="input ">
+                                <input type="number" class="pl-8 bg-color2-1 " id="bill" name="bill" placeholder="0" value="">
+                            </div><br>
+                            <label class="color5 font-semibold" for="">Select Tip%</label><br>
+                            <div class="mb-4 text-white font-semibold">
+                                <form action="/action_page.php" onsubmit="return calculateTip()">
+                                    <input id="tipAmount1" name="tip" class="  bg-color2 w-1/4 color5 font-semibold py-2 px-4 rounded" type="radio" value="5" class=" bg-color1">
+                                    <label for="tipAmount1">  5% </label>
+                                    <input id="tipAmount2" name="tip" class="  bg-color2 w-1/4 color5 font-semibold py-2 px-4 rounded" type="radio" value="10" class=" bg-color1">
+                                    <label for="tipAmount2">  10% </label>
+                                    <input id="tipAmount3" name="tip" class="  bg-color2 w-1/4 color5 font-semibold py-2 px-4 rounded" type="radio" value="15" class=" bg-color1">
+                                    <label for="tipAmount3">  15% </label><br>
+                                    <input id="tipAmount4" name="tip" class="  bg-color2 w-1/4 color5 font-semibold py-2 px-4 rounded" type="radio" value="25" class=" bg-color1">
+                                    <label for="tipAmount4">  25% </label>
+                                    <input id="tipAmount5" name="tip" class="  bg-color2 w-1/4 color5 font-semibold py-2 px-4 rounded" type="radio" value="50" class=" bg-color1">
+                                    <label for="tipAmount5">  50% </label>
+                                    <!-- <input name="" class="bg-color2-1 button-black" type="submit" value="Custom" class=" bg-color1"> -->
+                                </form>
+                            </div>
+                            <label class="color5 font-semibold" for="">Number of People</label><br>
+                            <div class="input">
+                                <input type="number" class="pl-8 bg-color2-1 " id="numOfPeople" name="bill" placeholder="0" value="">
+                            </div><br>
+                        </form>
+
+
+                    </div>
+
+                    <div class=" bg-color1  rounded-lg  w-1/2 ">
+                        <div class="my-10 mx-5 flex flex-row  ">
+                            <div class="w-1/2">
+                                <h2 class="text-sm text-white" id="totalTip">Tip Amount</h2>
+                                <p class="text-xs color2">/ person</p>
+                            </div>
+                            <div>
+                                <h1 class="text-4xl font-semibold color6">$<span id="tipFig">0.00</span></h1>
+                            </div>
+                        </div>
+                        <div class="my-10 mx-5 flex flex-row">
+                            <div class="w-1/2">
+                                <h2 class="text-sm text-white">Total</h2>
+                                <p class="text-xs color2">Amount</p>
+                            </div>
+                            <div>
+                                <h1 class="text-4xl font-semibold color6">$<span id="tipAmount">0.00</span></h1>
+                            </div>
+                        </div>
+                        <button id="calculate" class=" m-10 bg-color2 w-3/4 color5 font-semibold py-2 px-4 rounded" type="button">
+                            CALCULATE
+                        </button>
+                        <!-- <input class=" m-10 bg-color2 w-3/4 color5 font-semibold py-2 px-4 rounded  " type="submit" value="Submit"> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">0 - 30</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">31 - 60</label><br>
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">61 - 100</label><br><br>[]
+    </div> -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
